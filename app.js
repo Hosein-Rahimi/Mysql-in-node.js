@@ -1,0 +1,11 @@
+let express = require("express");
+let mysql = require("mysql");
+let axios = require("axios");
+let redis = require("redis");
+const bodyParser = require("body-parser");
+require("dotenv").config();
+let WebService = require("./WebServices");
+let app = express();
+let client = redis.createClient();
+app.use(bodyParser.json());
+const port = 8000;
